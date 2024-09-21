@@ -1,6 +1,6 @@
 🕵️‍♂️ SSH Credential Brute-Forcer 🔐
-Welcome to the SSH Credential Brute-Forcer, your powerful ally in the world of penetration testing! This script is designed to methodically probe target systems for open SSH ports, leveraging a user-defined list of usernames and passwords to unlock access.
 
+Welcome to the SSH Credential Brute-Forcer, your powerful ally in the world of penetration testing! This script is designed to methodically probe target systems for open SSH ports, leveraging a user-defined list of usernames and passwords to unlock access.
 With a sleek ping check to ensure the target is alive and responsive, you'll be guided through the process of connecting, authenticating, and executing commands remotely. Whether you're an aspiring ethical hacker or a seasoned security professional, this tool will enhance your toolkit and sharpen your skills.
 
 ⚠️ Disclaimer: Ensure you have explicit permission to test any target system. Unauthorized access is illegal and unethical. Use responsibly!
